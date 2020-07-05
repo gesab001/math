@@ -1,53 +1,78 @@
+<mat-grid-list cols="3" >
+  <mat-grid-tile>
+      <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>A</mat-card-title>
+        <mat-card-subtitle>Left side</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+      
+
+        <h2>RANGE</h2>
+        <mat-form-field class="example-form-field">
+          <mat-label>minimum</mat-label>
+          <input matInput type="number" [(ngModel)]="minA">
+
+        </mat-form-field>
+
+        <mat-form-field class="example-form-field">
+          <mat-label>maximum</mat-label>
+          <input matInput type="number" [(ngModel)]="maxA">
+
+        </mat-form-field>
+   
+      </mat-card-content>
+      <mat-card-actions>
+     <mat-radio-group aria-label="Select an option"  [(ngModel)]="numberTypeA">
+          <mat-radio-button value="Fix">Order</mat-radio-button>
+          <mat-radio-button value="Random">Random</mat-radio-button>
+        </mat-radio-group>
+      </mat-card-actions>
+    </mat-card> 
+  </mat-grid-tile>
+  <mat-grid-tile>+</mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>B</mat-card-title>
+        <mat-card-subtitle>Right side</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+   
+
+      
+        <h2>RANGE</h2>
+        <mat-form-field class="example-form-field">
+          <mat-label>minimum</mat-label>
+          <input matInput type="number" [(ngModel)]="minB">
+
+        </mat-form-field>
+
+        <mat-form-field class="example-form-field">
+          <mat-label>maximum</mat-label>
+          <input matInput type="number" [(ngModel)]="maxB">
+
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+         <mat-radio-group aria-label="Select an option" [(ngModel)]="numberTypeB">
+          <mat-radio-button value="Fix">Order</mat-radio-button>
+          <mat-radio-button value="Random">Random</mat-radio-button>
+        </mat-radio-group>
+      </mat-card-actions>
+    </mat-card>   
+  </mat-grid-tile>
+
+</mat-grid-list>
 
 
-<h1>A</h1>
-<mat-radio-group aria-label="Select an option"  [(ngModel)]="numberTypeA">
-  <mat-radio-button value="Fix">Order</mat-radio-button>
-  <mat-radio-button value="Random">Random</mat-radio-button>
-</mat-radio-group>
-<p>hello {{numberTypeA}}</p>
-<h2>RANDOM</h2>
-<mat-form-field class="example-form-field">
-  <mat-label>minimum</mat-label>
-  <input matInput type="number" [(ngModel)]="minA">
-
-</mat-form-field>
-
-<mat-form-field class="example-form-field">
-  <mat-label>maximum</mat-label>
-  <input matInput type="number" [(ngModel)]="maxA">
-
-</mat-form-field>
-<h2>FIX</h2>
-<mat-form-field class="example-form-field">
-  <mat-label>fix number</mat-label>
-  <input matInput type="number" [(ngModel)]="fixA">
-</mat-form-field>
-<h1>B</h1>
-<mat-radio-group aria-label="Select an option" [(ngModel)]="numberTypeB">
-  <mat-radio-button value="Fix">Order</mat-radio-button>
-  <mat-radio-button value="Random">Random</mat-radio-button>
-</mat-radio-group>
-<p>hello {{numberTypeB}}</p>
-<h2>FIX</h2>
-<mat-form-field class="example-form-field">
-  <mat-label>fix number</mat-label>
-  <input matInput type="number" [(ngModel)]="fixB">
-</mat-form-field>
-<h2>RANDOM</h2>
-<mat-form-field class="example-form-field">
-  <mat-label>minimum</mat-label>
-  <input matInput type="number" [(ngModel)]="minB">
-
-</mat-form-field>
-
-<mat-form-field class="example-form-field">
-  <mat-label>maximum</mat-label>
-  <input matInput type="number" [(ngModel)]="maxB">
-
-</mat-form-field>
 
 
+
+
+
+
+<br>
 <mat-form-field class="example-form-field">
   <mat-label>Total questions</mat-label>
   <input matInput type="number" [(ngModel)]="totalquestions">
