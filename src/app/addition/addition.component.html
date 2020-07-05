@@ -1,6 +1,70 @@
-<h1>ADDITION</h1>
+
+
+<h1>A</h1>
+<mat-radio-group aria-label="Select an option"  [(ngModel)]="numberTypeA">
+  <mat-radio-button value="Fix">Order</mat-radio-button>
+  <mat-radio-button value="Random">Random</mat-radio-button>
+</mat-radio-group>
+<p>hello {{numberTypeA}}</p>
+<h2>RANDOM</h2>
+<mat-form-field class="example-form-field">
+  <mat-label>minimum</mat-label>
+  <input matInput type="number" [(ngModel)]="minA">
+
+</mat-form-field>
+
+<mat-form-field class="example-form-field">
+  <mat-label>maximum</mat-label>
+  <input matInput type="number" [(ngModel)]="maxA">
+
+</mat-form-field>
+<h2>FIX</h2>
+<mat-form-field class="example-form-field">
+  <mat-label>fix number</mat-label>
+  <input matInput type="number" [(ngModel)]="fixA">
+</mat-form-field>
+<h1>B</h1>
+<mat-radio-group aria-label="Select an option" [(ngModel)]="numberTypeB">
+  <mat-radio-button value="Fix">Order</mat-radio-button>
+  <mat-radio-button value="Random">Random</mat-radio-button>
+</mat-radio-group>
+<p>hello {{numberTypeB}}</p>
+<h2>FIX</h2>
+<mat-form-field class="example-form-field">
+  <mat-label>fix number</mat-label>
+  <input matInput type="number" [(ngModel)]="fixB">
+</mat-form-field>
+<h2>RANDOM</h2>
+<mat-form-field class="example-form-field">
+  <mat-label>minimum</mat-label>
+  <input matInput type="number" [(ngModel)]="minB">
+
+</mat-form-field>
+
+<mat-form-field class="example-form-field">
+  <mat-label>maximum</mat-label>
+  <input matInput type="number" [(ngModel)]="maxB">
+
+</mat-form-field>
+
+
+<mat-form-field class="example-form-field">
+  <mat-label>Total questions</mat-label>
+  <input matInput type="number" [(ngModel)]="totalquestions">
+ 
+</mat-form-field>
+
+<mat-form-field class="example-form-field">
+  <mat-label>Font size</mat-label>
+  <input matInput type="number" [(ngModel)]="fontsize">
+  
+</mat-form-field>
+
+<button  mat-raised-button color="primary" (click)="generateQuestions()" mat-button>Create questions</button>
+<br>
+  <button mat-raised-button (click)="shuffleQuestions()" color="primary">Shuffle</button>
 <p *ngFor="let number of data">
-  {{number.a}} + {{number.b}} = {{number.answer}}
+  {{number.a}} + {{number.b}} = ____ 
 </p>
 
 

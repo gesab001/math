@@ -12,10 +12,18 @@ data: any[];
   ngOnInit(){
     this.data = [];
   
+    this.getData();
+   
+  }
+
+  getData(): any[]{
+   this.data = [];
+  
     for (var i = 0; i < 5; i++) {
-        let divisiblenumbers = [];
+
         let a = this.getRandomNumberBetween(0,100);
-        for (var x = 0; x<a; x++){
+        let divisiblenumbers = [1, a];
+        for (var x = 1; x<a; x++){
            let result = a % x;
            if (result ===0){
                divisiblenumbers.push(x);
@@ -27,7 +35,7 @@ data: any[];
         let obj = {a: a, b:b, answer: a/b};
         this.data.push(obj);
     }
-   
+    return this.data;
   }
 
   getRandomNumberBetween(min,max){
